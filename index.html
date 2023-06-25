@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Remixicon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Create Show & Hide Password Using HTML, CSS & JavaSript</title>
+</head>
+<body>
+    <div class="input__box">
+        <input type="password" required id="password">
+        <label class="input__label">Password</label>
+        <i class="ri-eye-line eye__btn"></i>
+    </div>
+
+
+
+    <script>
+        const eyeBtn = document.querySelector('.eye__btn');
+        const password = document.getElementById('password');
+
+        eyeBtn.addEventListener('click', function(){
+            eyeBtn.classList.toggle('ri-eye-off-line');
+
+            if(password.type === 'password'){
+                password.type = 'text'
+            }else{
+                password.type = 'password'
+            }
+        })
+    </script>
+</body>
+</html>
